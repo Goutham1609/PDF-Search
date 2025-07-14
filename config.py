@@ -1,0 +1,21 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+CSV_FILE_PATH = "brsr_metadata.csv"
+DOWNLOAD_DIR = "uploaded_pdfs"
+PINECONE_INDEX_NAME = "brsr-search-final"
+VECTOR_DIMENSION = 768
+EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"
+SIMILARITY_METRIC = "cosine"
+PINECONE_CLOUD = "aws"
+PINECONE_REGION = "us-east-1"
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 200
+DEFAULT_TOP_K = 5
+MIN_SIMILARITY_SCORE = 0.5
+COMPANY_SIMILARITY_THRESHOLD = 0.6
+EMBEDDING_BATCH_SIZE = 32
+UPSERT_BATCH_SIZE = 100
